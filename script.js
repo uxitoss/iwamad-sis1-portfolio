@@ -16,3 +16,18 @@ btn.addEventListener('click', () => {
     localStorage.setItem('theme', 'light');
   }
 });
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const nameValue = document.getElementById("name").value.trim();
+  const nameError = document.getElementById("name-error");
+
+  if (nameValue === "") {
+    nameError.textContent = "Please enter your name.";
+  } else {
+    nameError.textContent = "";
+  }
+});
