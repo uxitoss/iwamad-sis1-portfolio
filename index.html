@@ -50,7 +50,22 @@
 
         <section id="contact"> 
             <h2>Contact</h2>
-            <p>text</p>
+            <form novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <p class="error" id="name-error"></p>
+              
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <p class="error" id="email-error"></p>
+              
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                <p class="error" id="message-error"></p>
+              
+                <button type="submit">Send</button>
+                <p id="form-status" aria-live="polite"></p>
+              </form>
         </section>
     </main>
 
