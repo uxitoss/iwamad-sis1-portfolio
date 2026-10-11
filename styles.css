@@ -13,6 +13,12 @@
     --space-3: 24px;
     --space-4: 48px;
   }
+
+  html[data-theme="light"] {
+    --bg: #ffffff;
+    --text: #000000;
+    --accent: #a78bfa;
+  }
   
   body {
     background: var(--bg);
@@ -44,3 +50,15 @@
     display: flex;
     gap: var(--space-2);
   }
+
+
+.projects-grid {
+    display: grid;
+    gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
